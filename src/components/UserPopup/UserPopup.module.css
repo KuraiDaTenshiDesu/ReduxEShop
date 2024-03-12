@@ -1,0 +1,35 @@
+.Popup {
+  width: 250px;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  right: 135px;
+  top: calc(100% - 15px);
+  border-radius: 4px;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+.Popup__hidden {
+  display: none;
+}
+.Popup a {
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 24px;
+  transition: all 0.25s;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.Popup a img {
+  width: 24px;
+  height: 24px;
+}
+.Popup a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=UserPopup.module.css.map */
