@@ -1,0 +1,160 @@
+@use "../../style/variables" as *;
+@import "../../style/mixins";
+
+.Footer {
+  background: $color-black;
+  width: 100%;
+}
+
+.Container {
+  padding: 80px 135px;
+  display: flex;
+  justify-content: space-between;
+  gap: 85px;
+  border-bottom: 1px solid rgba($color: $color-close-white, $alpha: 0.4);
+}
+
+.Copyright {
+  padding: 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0.6;
+
+  & h2 {
+    color: $color-close-white;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+  }
+}
+
+.Subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  & h2 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    color: $color-close-white;
+  }
+
+  & p {
+    color: $color-close-white;
+
+    &:nth-child(2) {
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 500;
+    }
+
+    &:nth-child(3) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  & form {
+    width: 200px;
+    position: relative;
+
+    & input {
+      width: 100%;
+      background: $color-black;
+      color: $color-close-white;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 10px 15px;
+      padding-right: 35px;
+      border: 2px solid $color-close-white;
+      border-radius: 4px;
+      outline: 0;
+    }
+
+    & button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+    }
+  }
+}
+
+.Download {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: $color-close-white;
+
+  & h2 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  & p {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    opacity: 0.7;
+  }
+}
+
+.Social {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.DownloadLinks {
+  display: grid;
+  gap: 5px 10px;
+  grid-template:
+    "a b"
+    "a c";
+
+  & div {
+    grid-area: a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:nth-child(2) {
+      grid-area: b;
+    }
+
+    &:nth-child(3) {
+      grid-area: c;
+    }
+  }
+}
+
+.Support {
+  @include FooterTextBlock;
+  max-width: 175px;
+}
+
+.Account {
+  @include FooterTextBlock;
+}
+
+.QuickLink {
+  @include FooterTextBlock;
+}
